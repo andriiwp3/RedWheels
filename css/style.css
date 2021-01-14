@@ -1065,8 +1065,9 @@ select:-webkit-autofill:focus {
 }
 
 .calc__title {
+  display: block;
   color: #ffffff;
-  margin: 0px 0px 35px 0px;
+  margin: 0px 0px 15px 0px;
 }
 
 .calc__subtitle {
@@ -1080,7 +1081,7 @@ select:-webkit-autofill:focus {
 }
 
 .calc__range {
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 .calc__range input {
@@ -1131,12 +1132,17 @@ select:-webkit-autofill:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10px 0px 0px 0px;
 }
 
 .calc__values p {
   color: #ffffff;
   font-size: 12px;
   font-weight: 500;
+}
+
+.calc__current {
+  font-size: 16px !important;
 }
 
 .calc__res {
@@ -1327,17 +1333,18 @@ select:-webkit-autofill:focus {
       -ms-flex-align: end;
           align-items: flex-end;
   background: bottom/contain no-repeat url(../img/steps/scooter-bg.svg);
-  overflow: hidden;
 }
 
 .steps__img._in-sight img {
   left: 0;
+  opacity: 1;
 }
 
 .steps__img img {
   position: relative;
   max-width: 27.30627%;
   left: 100%;
+  opacity: 0;
   -webkit-transition: all 1.5s ease 0.2s;
   -o-transition: all 1.5s ease 0.2s;
   transition: all 1.5s ease 0.2s;
@@ -1755,7 +1762,7 @@ select:-webkit-autofill:focus {
 }
 
 .faq__item {
-  margin: 0px 0px 25px 0px;
+  margin: 0px 0px 15px 0px;
 }
 
 .faq__item:last-child {

@@ -9,8 +9,11 @@
       <link
          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
          rel="stylesheet"
-		/>
-		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+      />
+      <link
+         href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css"
+         rel="stylesheet"
+      />
       <link rel="stylesheet" href="./css/style.min.css" />
    </head>
    <body>
@@ -1542,45 +1545,64 @@
                   <div class="profit__cont">
                      <div class="profit__body">
                         <div class="profit__calc calc">
-                           <h5 class="calc__title">
-                              Количество электросамокатов:
-                           </h5>
                            <div class="calc__input">
                               <div class="calc__range">
+                              	   <label
+                                    for="scootersNumber"
+                                    class="calc__title"
+                                 >
+                                    Количество электросамокатов:
+                                 </label>
                                  <input
-                                    min="50"
+                                    min="100"
                                     max="500"
                                     type="range"
+                                    id="scootersNumber"
                                     data-rangeSlider
                                  />
+                                 <div class="calc__values">
+                                    <p class="calc__min">100</p>
+                                    <p class="calc__current _sc-number">300</p>
+                                    <p class="calc__max">500</p>
+                                 </div>
                               </div>
-                              <div class="calc__values">
-                                 <p class="calc__min">50</p>
-                                 <p class="calc__current">50</p>
-                                 <p class="calc__max">500</p>
+                              <div class="calc__range">
+                                 <label
+                                    for="revenuePerScooter"
+                                    class="calc__title"
+                                 >
+                                    Выручка на 1 шт.
+                                 </label>
+                                 <input
+                                    min="150"
+                                    max="500"
+                                    type="range"
+                                    id="revenuePerScooter"
+                                    data-rangeSlider
+											/>
+											<div class="calc__values">
+                                    <p class="calc__min">150</p>
+                                    <p class="calc__current _revenue-per-sc">575</p>
+                                    <p class="calc__max">1000</p>
+                                 </div>
                               </div>
                            </div>
                            <div class="calc__outcome">
-                              <div class="calc__res calc__res_revenue">
+
+                              <div class="calc__res calc__res_costs">
                                  <h6 class="calc__subtitle">
-                                    Ежемесячная выручка:
+                                    Затраты:
                                  </h6>
                                  <span>700 000</span>
-                              </div>
-                              <div class="calc__res calc__res_fixed-costs">
+										</div>
+										<div class="calc__res calc__res_payback">
                                  <h6 class="calc__subtitle">
-                                    Постоянные издержки:
-                                 </h6>
-                                 <span>700 000</span>
-                              </div>
-                              <div class="calc__res calc__res_variable-costs">
-                                 <h6 class="calc__subtitle">
-                                    Переменные издержки:
+                                    Срок окупаемости (мес):
                                  </h6>
                                  <span>700 000</span>
                               </div>
                               <div class="calc__sum">
-                                 <h6 class="calc__subtitle">Чистая прибыль:</h6>
+                                 <h6 class="calc__subtitle">Примерная прибыль:</h6>
                                  <span>350 000 руб / мес.</span>
                               </div>
                            </div>
@@ -1723,31 +1745,68 @@
                         <p class="request__desc">
                            Оставьте заявку прямо сейчас и мы свяжемся с Вами в
                            ближайшее время!
-								</p>
-								
-								<form class="request__form form">
-									<div class="request__input form__input">
-										<input type="text" name="name" required placeholder="Имя" class="_req">
-									</div>
-									<div class="request__input form__input">
-										<input type="tel" name="phone" required placeholder="Телефон (без пробелов)" class="_req _phone">
-									</div>
-									<div class="request__input form__input">
-										<input type="text" name="email" required placeholder="E-mail" class="_req _email">
-									</div>
-									<div class="request__input form__input">
-										<input type="text" name="city" required placeholder="Город" class="_req">
-									</div>
-									<div class="request__input form__input form__input_select">
-										<select name="communicationMethod" required class="_req _select">
-											<option value="default" disabled selected>Удобный способ связи</option>
-											<option value="Телефон">Телефон</option>
-											<option value="E-mail">E-mail</option>
-										</select>
-									</div>
-									<p class="form__message"></p>
-									<button type="submit" class="request__btn form__btn btn">Получить предложение</button>
-								</form>		
+                        </p>
+
+                        <form class="request__form form">
+                           <div class="request__input form__input">
+                              <input
+                                 type="text"
+                                 name="name"
+                                 required
+                                 placeholder="Имя"
+                                 class="_req"
+                              />
+                           </div>
+                           <div class="request__input form__input">
+                              <input
+                                 type="tel"
+                                 name="phone"
+                                 required
+                                 placeholder="Телефон (без пробелов)"
+                                 class="_req _phone"
+                              />
+                           </div>
+                           <div class="request__input form__input">
+                              <input
+                                 type="text"
+                                 name="email"
+                                 required
+                                 placeholder="E-mail"
+                                 class="_req _email"
+                              />
+                           </div>
+                           <div class="request__input form__input">
+                              <input
+                                 type="text"
+                                 name="city"
+                                 required
+                                 placeholder="Город"
+                                 class="_req"
+                              />
+                           </div>
+                           <div
+                              class="request__input form__input form__input_select"
+                           >
+                              <select
+                                 name="communicationMethod"
+                                 required
+                                 class="_req _select"
+                              >
+                                 <option value="default" disabled selected>
+                                    Удобный способ связи
+                                 </option>
+                                 <option value="Телефон">Телефон</option>
+                                 <option value="E-mail">E-mail</option>
+                              </select>
+                           </div>
+                           <p class="form__message"></p>
+                           <button
+                              type="submit"
+                              class="request__btn form__btn btn"
+                           >
+                              Получить предложение
+                           </button>
+                        </form>
                      </div>
                      <div class="request__img">
                         <img src="./img/request/scooter.svg" alt="" />
