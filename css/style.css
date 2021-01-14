@@ -311,8 +311,16 @@ select:-webkit-autofill:focus {
   top: 0;
   left: 0;
   z-index: 50;
-  -webkit-animation: drop .9s ease 0s 1;
-          animation: drop .9s ease 0s 1;
+  -webkit-animation: drop 0.9s ease 0s 1;
+          animation: drop 0.9s ease 0s 1;
+}
+
+.header.scrolled:before {
+  background-color: #0e151d;
+}
+
+.header.scrolled .menu__link {
+  color: #ffffff !important;
 }
 
 .header:before {
@@ -322,7 +330,6 @@ select:-webkit-autofill:focus {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #0e151d;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -375,6 +382,11 @@ select:-webkit-autofill:focus {
 
 .header__logo img {
   max-width: 100%;
+}
+
+.header__menu li:last-child a,
+.header__menu li:nth-last-child(2) a {
+  color: #0e151d;
 }
 
 .icon-menu {
@@ -476,6 +488,12 @@ select:-webkit-autofill:focus {
   right: 0;
 }
 
+.hero._in-sight .hero__container:before {
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
 .hero._in-sight .hero__title,
 .hero._in-sight .hero__btn {
   transform: translate3d(0px, 0px, 0px);
@@ -489,7 +507,7 @@ select:-webkit-autofill:focus {
 .hero:before {
   content: '';
   position: absolute;
-  top: 70px;
+  top: 0;
   left: 0;
   width: 50%;
   height: 100%;
@@ -513,6 +531,7 @@ select:-webkit-autofill:focus {
   right: -100%;
   width: 53.47222vw;
   height: 100%;
+  opacity: 0.96;
   background: left bottom/cover no-repeat url(../img/hero/bg-scooter.svg);
   -webkit-transition: all 0.8s ease 0.5s;
   -o-transition: all 0.8s ease 0.5s;
@@ -532,6 +551,22 @@ select:-webkit-autofill:focus {
 .hero__container {
   position: relative;
   z-index: 2;
+}
+
+.hero__container:before {
+  content: '';
+  position: absolute;
+  width: 133px;
+  height: 133px;
+  left: 50%;
+  top: 110px;
+  background: center/contain no-repeat url(../img/sun.svg);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
 }
 
 .hero__body {
@@ -1547,11 +1582,22 @@ select:-webkit-autofill:focus {
 }
 
 .request__img {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 41.6129%;
           flex: 0 0 41.6129%;
   -webkit-animation: rotate 1.6s ease 0.4s infinite alternate both;
           animation: rotate 1.6s ease 0.4s infinite alternate both;
+}
+
+.request__img:after {
+  content: '';
+  position: absolute;
+  width: 133px;
+  height: 133px;
+  bottom: 82%;
+  left: 82%;
+  background: center/contain no-repeat url(../img/sun.svg);
 }
 
 .request__img img {
@@ -2077,13 +2123,39 @@ select:-webkit-autofill:focus {
   }
 }
 
+@media (min-width: 2020px) {
+  .header__menu li:nth-last-child(2) a {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 2480px) {
+  .header__menu li:last-child a {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1552px) {
+  .header__menu li:nth-last-child(3) a {
+    color: #0e151d;
+  }
+}
+
 @media (max-width: 1262px) {
   .container {
     max-width: 970px;
   }
 
+  .header__menu li:nth-last-child(3) a {
+    color: #ffffff;
+  }
+
   .menu__link {
     font-size: 10.5px;
+  }
+
+  .hero:after {
+    width: 57.47222vw;
   }
 
   .about__container:after {
@@ -2193,6 +2265,10 @@ select:-webkit-autofill:focus {
 
   .menu__link {
     font-size: 20px;
+  }
+
+  .hero:after {
+    width: 53.47222vw;
   }
 
   .hero:after {
@@ -2459,6 +2535,10 @@ select:-webkit-autofill:focus {
 
   .request__container:after {
     left: 15px;
+  }
+
+  .request__img:after {
+    display: none;
   }
 
   .item-faq {
