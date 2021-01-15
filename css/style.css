@@ -1778,6 +1778,27 @@ select:-webkit-autofill:focus {
   color: #ffffff;
 }
 
+.form__input input::-webkit-input-placeholder, .form__input .select2::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form__input input::-moz-placeholder, .form__input .select2::-moz-placeholder {
+  color: #ffffff;
+}
+
+.form__input input:-ms-input-placeholder, .form__input .select2:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__input input::-ms-input-placeholder, .form__input .select2::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__input input::placeholder,
+.form__input .select2::placeholder {
+  color: #ffffff;
+}
+
 .form__input_select {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -2075,24 +2096,6 @@ select:-webkit-autofill:focus {
     color: #df2c2c;
   }
 
-  .item-services:hover .item-services__icon {
-    -ms-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-
-  .item-services:hover .item-services__icon_white {
-    opacity: 0;
-  }
-
-  .item-services:hover .item-services__icon_red {
-    opacity: 1;
-  }
-
-  .item-services__icon_red {
-    opacity: 0;
-  }
-
   .item-step:hover .item-step__icon {
     -ms-transform: scale(1.09);
     -webkit-transform: scale(1.09);
@@ -2124,6 +2127,24 @@ select:-webkit-autofill:focus {
   .header__menu .menu__list {
     position: relative;
     z-index: 49;
+  }
+
+  .item-services:hover .item-services__icon {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .item-services:hover .item-services__icon_white {
+    opacity: 0;
+  }
+
+  .item-services:hover .item-services__icon_red {
+    opacity: 1;
+  }
+
+  .item-services__icon_red {
+    opacity: 0;
   }
 }
 
@@ -2333,6 +2354,10 @@ select:-webkit-autofill:focus {
             flex: 0 0 50%;
   }
 
+  .item-services__icon_white {
+    opacity: 0;
+  }
+
   .profit__container:after {
     -ms-transform: rotate(-65deg);
     -webkit-transform: rotate(-65deg);
@@ -2475,10 +2500,6 @@ select:-webkit-autofill:focus {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 48%;
             flex: 0 0 48%;
-  }
-
-  .item-services__icon_white {
-    opacity: 0;
   }
 
   .benefit__container:after {
