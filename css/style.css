@@ -603,7 +603,7 @@ select:-webkit-autofill:focus {
   padding: 100px 0px;
 }
 
-.about._in-sight #man {
+.about._in-sight #about_man {
   transform: translate3d(0px, 0px, 0px);
   -webkit-transform: translate3d(0px, 0px, 0px);
   -ms-transform: translate3d(0px, 0px, 0px);
@@ -615,7 +615,7 @@ select:-webkit-autofill:focus {
   left: 0;
 }
 
-.about #man {
+.about #about_man {
   transform: translate3d(-100%, 0px, 0px);
   -webkit-transform: translate3d(-100%, 0px, 0px);
   -ms-transform: translate3d(-100%, 0px, 0px);

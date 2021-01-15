@@ -11,6 +11,7 @@ if (animItems.length > 0) {
          let animStart = 4
          if (animItem.classList.contains('_anim-all')) animStart = 1
          if (animItem.classList.contains('_anim-half')) animStart = 2
+			if (animItem.classList.contains('_anim-custom')) animStart = +animItem.dataset.anim
 
          let animItemPoint = window.innerHeight - animItemHeight / animStart
 
