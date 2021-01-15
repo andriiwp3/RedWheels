@@ -2092,6 +2092,10 @@ select:-webkit-autofill:focus {
             filter: drop-shadow(0 11px rgba(223, 44, 44, 0.35));
   }
 
+  .header.scrolled .menu__link:hover {
+    color: #df2c2c !important;
+  }
+
   .menu__link:hover {
     color: #df2c2c;
   }
@@ -2133,14 +2137,6 @@ select:-webkit-autofill:focus {
     -ms-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
-  }
-
-  .item-services:hover .item-services__icon_white {
-    opacity: 0;
-  }
-
-  .item-services:hover .item-services__icon_red {
-    opacity: 1;
   }
 
   .item-services__icon_red {
