@@ -1253,14 +1253,18 @@ select:-webkit-autofill:focus {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 62%;
           flex: 0 0 62%;
+  overflow: hidden;
 }
 
-.gallery__current img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
+.gallery__current-item {
+  max-width: 100%;
   min-height: 100%;
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery__current-item img {
+  max-width: 100%;
 }
 
 .gallery__other {
@@ -1297,7 +1301,7 @@ select:-webkit-autofill:focus {
 }
 
 .gallery__slide {
-  width: 100%;
+  width: 100% !important;
   margin: 0px 0px 30px 0px;
 }
 
@@ -2963,6 +2967,10 @@ select:-webkit-autofill:focus {
   .gallery__col:first-child,
   .gallery__col:last-child {
     padding: 0;
+  }
+
+  .gallery__col:last-child {
+    display: none;
   }
 
   .gallery__slide {
