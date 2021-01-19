@@ -2416,10 +2416,10 @@ select:-webkit-autofill:focus {
 .footer:after {
   content: '';
   position: absolute;
-  width: 6.55738%;
+  width: 12.62295%;
   min-width: 90px;
   min-height: 100px;
-  height: 21.59091%;
+  height: 42.27273%;
   right: 0;
   bottom: 0;
   background: right bottom/contain no-repeat url(../img/footer/decor.svg);
