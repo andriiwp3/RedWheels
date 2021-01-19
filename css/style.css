@@ -1024,7 +1024,8 @@ select:-webkit-autofill:focus {
 }
 
 .platform__items .slick-track {
-  height: 350px;
+  height: 18.22917vw;
+  min-height: 350px;
 }
 
 .platform__arrows {
@@ -1054,7 +1055,7 @@ select:-webkit-autofill:focus {
 }
 
 .platform__arrow.slick-disabled {
-  opacity: .5;
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -2705,7 +2706,7 @@ select:-webkit-autofill:focus {
   }
 
   .platform__items .slick-track {
-    height: 260px;
+    min-height: 280px;
   }
 
   .benefit__container:after {
@@ -2888,7 +2889,7 @@ select:-webkit-autofill:focus {
   }
 
   .platform__items .slick-track {
-    height: 340px;
+    min-height: 415px;
   }
 
   .app__body {
@@ -3129,7 +3130,8 @@ select:-webkit-autofill:focus {
   }
 
   .platform__items .slick-track {
-    height: 310px;
+    min-height: auto;
+    height: 54.22917vw;
   }
 
   .platform__arrow {
@@ -3423,7 +3425,7 @@ select:-webkit-autofill:focus {
   }
 
   .platform__items .slick-track {
-    height: 240px;
+    height: 55.22917vw;
   }
 
   .app {
